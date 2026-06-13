@@ -1,0 +1,13 @@
+<div class="pose-detector-container" style="display: flex; gap: 2rem;">
+  <div>
+    <h2>Webcam Feed</h2>
+    <video #videoElement autoplay playsinline style="border: 2px solid #ccc; width: 640px; height: 480px;"></video>
+  </div>
+
+  <div class="stats-panel" style="padding: 1rem; border: 1px solid #eee; border-radius: 8px;">
+    <h2>Live Stats</h2>
+    <p><strong>Squats:</strong> {{ squatReps }}</p>
+    <p><strong>Push-Ups:</strong> {{ pushupReps }}</p>
+    <p><strong>Quality Score:</strong> {{ qualityScore | number:'1.1-1' }} / 100</p>
+  </div>
+</div>
