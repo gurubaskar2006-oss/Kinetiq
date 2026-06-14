@@ -8,6 +8,8 @@
           <th>Exercise</th>
           <th>Reps</th>
           <th>Quality Score</th>
+          <th>Avg ROM</th>
+          <th>Risk Flags</th>
         </tr>
       </thead>
       <tbody>
@@ -16,6 +18,15 @@
           <td>{{ session.exercise_type }}</td>
           <td>{{ session.reps }}</td>
           <td>{{ session.quality_score | number:'1.1-2' }}</td>
+          <td>{{ session.average_rom | number:'1.0-1' }}&deg;</td>
+          <td style="color: red;">
+              <span *ngIf="session.risk_flags && session.risk_flags.length > 0">
+                {{ session.risk_flags.join(', ') }}
+              </span>
+              <span *ngIf="!session.risk_flags || session.risk_flags.length === 0" style="color: green;">
+                None
+              </span>
+          </td>
         </tr>
       </tbody>
     </table>

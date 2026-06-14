@@ -9,5 +9,6 @@
     <p><strong>Squats:</strong> {{ squatReps }}</p>
     <p><strong>Push-Ups:</strong> {{ pushupReps }}</p>
     <p><strong>Quality Score:</strong> {{ qualityScore | number:'1.1-1' }} / 100</p>
+    <button (click)="stopWorkout()" style="padding: 10px 15px; margin-top: 20px; background-color: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer;">Stop Workout</button>
   </div>
 </div>

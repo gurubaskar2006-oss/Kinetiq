@@ -4,10 +4,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from datetime import timedelta
 
-from . import models, schemas, database, auth
-
-# Create DB tables
-models.Base.metadata.create_all(bind=database.engine)
+import models, schemas, database, auth
 
 app = FastAPI(title="Kinetiq API")
 

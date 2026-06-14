@@ -31,9 +31,13 @@ class SessionBase(BaseModel):
     reps: int
     quality_score: float
     duration: float
+    average_rom: float = 0.0
+    average_balance: float = 0.0
+    risk_flags: List[str] = []
+    exercise_version: str = "v1.0"
 
 class SessionCreate(SessionBase):
-    pass
+    replay_data: List[dict] = []
 
 class SessionResponse(SessionBase):
     id: int
