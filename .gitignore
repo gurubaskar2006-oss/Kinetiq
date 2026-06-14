@@ -1,0 +1,7 @@
+backend/venv
+sql_app.db
+test_app.db
+__pycache__/
+*.pyc
+test_app.db
+frontend/dist
